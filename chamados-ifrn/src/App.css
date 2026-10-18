@@ -1,0 +1,219 @@
+header {
+  padding: 20px 30px;
+  background: #7ac5a3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav a {
+  padding: 8px 13px;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: white;
+}
+
+header nav a:hover {
+  background: #6bb693;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+h2,
+h3 {
+  color: #426b50;
+  font-family: "Times New Roman", serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+button,
+main > p:has(a[href="/novo"]) a,
+main:has(> a[href="/"]) > a[href="/"] {
+  padding: 10px 16px;
+  border: 1px solid #739b7d;
+  border-radius: 8px;
+  background: #739b7d;
+  color: white;
+  text-decoration: none;
+}
+
+button:hover,
+main > p:has(a[href="/novo"]) a:hover,
+main:has(> a[href="/"]) > a[href="/"]:hover {
+  background: #5d8567;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #d5e3d8;
+  border-radius: 8px;
+  background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px solid #739b7d;
+}
+
+main > h2:first-child {
+  display: inline-block;
+  width: 60%;
+}
+
+main > p:has(a[href="/novo"]) {
+  display: inline-block;
+  width: 39%;
+  text-align: right;
+}
+
+main > input[type="text"] {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 12px;
+}
+
+main > select {
+  margin: 0 6px 20px 0;
+}
+
+main > div:has(h3 a) {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin: 0 1% 18px 0;
+  padding: 18px;
+  border: 1px solid #d5e3d8;
+  border-radius: 8px;
+}
+
+main > div:has(h3 a) h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+main > div:has(h3 a) p {
+  margin: 8px 0;
+  color: #555;
+}
+
+main > div:has(h3 a) hr {
+  display: none;
+}
+
+main form {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid #d5e3d8;
+  border-radius: 8px;
+}
+
+main form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #426b50;
+}
+
+main form input,
+main form select,
+main form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+main form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+main form input[type="date"] {
+  max-width: 260px;
+}
+
+main form button {
+  margin: 4px 6px 4px 0;
+}
+
+main form button[type="button"],
+main > div:has(> button) button:last-child {
+  background: white;
+  color: #426b50;
+  border-color: #d5e3d8;
+}
+
+main:has(> a[href="/"]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+main:has(> a[href="/"]) > a[href="/"] {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  margin: 0 0 24px 16px;
+}
+
+main:has(> a[href="/"]) > h2:first-of-type {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  margin: 0 0 24px;
+  overflow-wrap: anywhere;
+}
+
+main > p:has(strong) {
+  max-width: 850px;
+  margin: 0;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e8efe9;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+main > p strong {
+  color: #426b50;
+}
+
+main:has(> a[href="/"]) > p,
+main:has(> a[href="/"]) > form,
+main:has(> a[href="/"]) > div {
+  grid-column: 1 / -1;
+}
+
+main > form:has(#responsavel),
+main > form:has(#solucao) {
+  margin-top: 25px;
+  background: #fcfefc;
+}
+
+main > div:has(> button) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
